@@ -1,0 +1,155 @@
+@media screen and (max-width: 1250px) {
+  #home #captionWrapper #caption {
+    width: 70%;
+    -webkit-animation: unset;
+            animation: unset;
+    border-right: 0px;
+  }
+  #home #captionWrapper #caption h1 {
+    white-space: pre-wrap;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #projects .project {
+    width: 45%;
+  }
+  #skills .skill {
+    width: 25%;
+  }
+  #education .education {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  #education .education .text {
+    width: 100%;
+  }
+  #education .education .icon {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    position: unset;
+  }
+  nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  #home {
+    padding: 20px 0px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 400px;
+  }
+  #projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #projects .project {
+    width: 80%;
+  }
+  #skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #skills .skill {
+    margin: 15px 0px;
+    width: 22%;
+  }
+  #skills .skill p {
+    font-size: 20px;
+  }
+  #about #aboutContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #about #aboutContent .about {
+    width: 70%;
+    border: none;
+    padding: 0px;
+  }
+  #about #aboutContent .author {
+    width: 70%;
+  }
+  #contact .contact {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav ul li {
+    margin: 5px 0px;
+  }
+  nav ul li a {
+    font-size: 17px;
+    padding: 5px;
+  }
+  #skills .skill {
+    width: 32%;
+  }
+  #skills .skill p {
+    font-size: 17px;
+  }
+  #education .education {
+    width: 80%;
+  }
+  #about #aboutContent .about {
+    width: 85%;
+  }
+  #contact .contact {
+    width: 90%;
+  }
+  #contact .contact .form .input {
+    width: 100%;
+  }
+  footer {
+    text-align: center;
+  }
+  footer .up #logo {
+    width: 100%;
+  }
+  footer .up #list {
+    width: 100%;
+  }
+  #home #captionWrapper #caption {
+    width: 70%;
+    -webkit-animation: unset;
+            animation: unset;
+    border-right: 0px;
+  }
+  #home #captionWrapper #caption h1 {
+    font-size: 30px;
+  }
+}
+/*# sourceMappingURL=queries.css.map */

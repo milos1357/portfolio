@@ -1,0 +1,157 @@
+@import 'mixinsVariables.scss';
+
+@media screen and (max-width: 1250px){
+    #home{
+        #captionWrapper{
+            #caption{
+                width: 70%;
+                animation: unset;
+                border-right: 0px;
+                h1{
+                    white-space: pre-wrap;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 920px) {
+    #projects{
+        .project{
+            width: 45%;
+        }
+    }
+    #skills{
+        .skill{
+            width: 25%;
+        }
+    }
+    #education{
+        .education{
+            flex-direction: column;
+            text-align: center;
+            .text{
+                width: 100%;
+            }
+            .icon{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        position: unset;
+        ul{
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+    #home{
+        padding: 20px 0px;
+        align-items: flex-start;
+        height: 400px;
+    }
+    #projects{
+        @include sCenter();
+        .project{
+            width: 80%;
+        }
+    }
+    #skills{
+        @include sBetween();
+        .skill{
+            margin: 15px 0px;
+            width: 22%;
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+    #about{
+        #aboutContent{
+            flex-direction: column-reverse;
+            .about{
+                width: 70%;
+                border: none;
+                padding: 0px;
+            }
+            .author{
+                width: 70%;
+            }
+        }
+    }
+    #contact{
+        .contact{
+            width: 90%;
+        }
+    }
+}
+  
+
+@media screen and (max-width: 480px){
+    nav{
+        ul{
+            li{
+                margin: 5px 0px;
+                a{
+                    font-size: 17px;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+    #skills{
+        .skill{
+            width: 32%;
+            p{
+                font-size: 17px;
+            }
+        }
+    }
+    #education{
+        .education{
+            width: 80%;
+        }
+    }
+    #about{
+        #aboutContent{
+            .about{
+                width: 85%;
+            }
+        }
+    }
+    #contact{
+        .contact{
+            width: 90%;
+            .form{
+                .input{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    footer{
+        text-align: center;
+        .up{
+            #logo{
+                width: 100%;
+            }
+            #list{
+                width: 100%;
+            }
+        }
+    }
+    #home{
+        #captionWrapper{
+            #caption{
+                width: 70%;
+                animation: unset;
+                border-right: 0px;
+                h1{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

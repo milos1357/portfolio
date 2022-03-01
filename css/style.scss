@@ -1,0 +1,312 @@
+@import 'mixinsVariables.scss';
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{ 
+    scroll-behavior: smooth;
+}
+body{
+    line-height: 2;font-family: 'Chakra Petch', sans-serif;
+    @include font();
+}
+p{
+    font-size: 18px;
+}
+h2{
+    font-size: 30px;
+}
+// animations
+@keyframes typingCaption {
+	from { width: 0; }
+	to { width: 100%; }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: $blinkColor; }
+  }
+
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+    background-color: $headerColor;
+    @include shadow();
+    ul{
+        @include contentWidth();
+        padding: 15px 0px;
+        @include sBetween();
+        list-style-type: none;
+        li{
+            a{
+                padding: 10px;
+                font-size: 19px;
+                text-decoration: none;
+                color: $blinkColor;
+                text-transform: uppercase;
+                font-weight: bold;
+                &:hover{
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+.heading{
+    width: 100%;
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+#home{
+    @include flex();
+    width: 100%;
+    height: 625px;
+    position: relative;
+    overflow: hidden;
+    #captionWrapper{
+        position: absolute;
+        z-index: 90;
+        padding-left: 20px;
+        #caption{
+            width: auto;
+            animation: typingCaption 4s steps(30, end), blink-caret .5s step-end infinite;
+            border-right: .15em solid $blinkColor;
+            overflow: hidden;
+            h1{
+                letter-spacing: 2px;
+                white-space: nowrap;
+                font-size: 35px;
+            }
+        }
+    }
+    .background{
+        position: absolute;
+        z-index: 85;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $bgColor;
+        clip-path: polygon(100% 35%, 0 100%, 100% 100%);
+    }
+}
+#projects{
+    padding: 70px 0px;
+    @include contentWidth();
+    @include sBetween();
+    .project{
+        margin: 20px 0px;
+        width: 30%;
+        text-align: center;
+        @include border();
+        border-radius: 2px;
+        .text{
+            padding: 10px;
+            a{
+                text-decoration: none;
+                color: $blinkColor;
+            }
+        }
+        &:hover{
+            @include shadow();
+            border: 0px;
+            transform: scale(1.02);
+            transition: ease-in-out 0.3s;
+        }
+    }
+}
+
+#skills{
+    padding: 70px 0px;
+    @include contentWidth();
+    @include sCenter();
+    .skill{
+        // @include gradient($bgColor,$bgColorSecond);
+        text-align: center;
+        width: 16%;
+        margin: 20px 15px;
+        padding: 30px 10px;
+        box-shadow: 6px 6px 10px 0px #c2c2c2;
+        border-radius: 2px;
+        p{
+            // color: $skillsColor;
+            font-size: 25px;
+        }
+        i{
+            // color: $skillsColor;
+            font-size: 45px;
+            &.fa-html5{
+                color: rgb(255, 123, 0);
+            }
+            &.fa-css3-alt{
+                color: rgb(92, 176, 197);
+            }
+            &.fa-sass{
+                color: rgb(255, 149, 149)
+            }
+            &.fa-bootstrap{
+                color: purple;
+            }
+            &.fa-js-square{
+                color: rgb(255, 196, 0);
+            }
+            &.fa-vuejs{
+                color: #3fb27f;
+            }
+            &.fa-java{
+                color: #507e9c;
+            }
+            &.fa-database{
+                color: #4087c1;
+            }
+        }
+        // &:hover{
+        //     @include gradient($bgColorSecond,$bgColor);
+        // }
+    }
+}
+#education{
+    padding: 70px 0px;
+    @include sAround();
+    .education{
+        margin: 25px 0px;
+        width: 40%;
+        @include sAround();
+        @include shadow();
+        padding: 25px 0px;
+        border-radius: 2px;
+        .icon{
+            text-align: center;
+            i{
+                font-size: 70px;
+                color: $blinkColor;
+            }
+        }
+    }
+}
+#about{
+    padding: 70px 0px;
+    @include sAround();
+    #aboutContent{
+        @include contentWidth();
+        @include sBetween();
+        .about{
+            border-radius: 2px;
+            margin: 25px 0px;
+            width: 50%;
+            text-align: justify;
+            padding: 20px;
+            border-left: 1px solid $bgColor;
+            &:nth-child(1){
+                border: 0px;
+            }
+            a{
+                font-size: 35px;
+                color: $bgColor;
+                margin-right: 15px;
+                &:hover{
+                    color: #000;
+                }
+            }
+        }
+        .author{
+            text-align: center;
+            img{
+                border-radius: 2px;
+                width: 80%;
+            }
+        }
+    }
+}
+#contact{
+    padding: 70px 0px;
+    @include sAround();
+    background-image: url('../img/bgFormFinal.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: $skillsColor;
+    .contact{
+        margin: 15px 0px;
+        width: 65%;
+        .form{
+            width: 100%;
+            @include sBetween();
+            margin-top: 5px;
+            label{
+                font-size: 18px;
+            }
+            .input{
+                width: 47%;
+            }
+            input{
+                @include input();
+                padding: 5px;
+            }
+            textarea{
+                @include input();
+                height: 200px;
+                padding: 5px;
+                resize: vertical;
+            }
+            input[type=submit]{
+                padding: 10px 15px;
+                @include gradient($bgColor,$bgColorSecond);
+                border: none;
+                width: fit-content;
+                text-transform: uppercase;
+                color: $skillsColor;
+                margin-top: 15px;
+            }
+        }
+        &.image{
+            height: 450px;
+            background-color: red;
+        }
+    }
+}
+footer{
+    width: 100%;
+    @include sAround();
+    .up{
+        width: 100%;
+        @include sBetween();
+        padding: 45px;
+        background-color: $bgFooter;
+        #logo{
+            color: #fff;
+            h4{
+                font-size: 40px;
+            }
+        }
+        #list{
+            ul{
+                list-style-type: none;
+                li{
+                    color: #fff;
+                    font-size: 18px;
+                    a{
+                        color: #fff;
+                        text-decoration: none;
+                        &:hover{
+                            color: $blinkColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #original{
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+        background-color: $mainColor;
+        color: #fff;
+        h4{
+            font-size: 18px;
+        }
+    }
+}
